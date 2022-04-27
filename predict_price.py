@@ -9,9 +9,19 @@ if __name__ == '__main__':
     data = []
     for row in rows:
         data = row
-    y_intercept = float(data[0])
-    slope = float(data[1]) 
+    try:
+        y_intercept = float(data[0])
+        slope = float(data[1])
+    except:
+        print("Error: corrupted data")
+        f.close()
+        exit()
     mileage = input("Enter the mileage: ")
-    print(calc_price(float(mileage), y_intercept, slope), '$')
+    try:
+        print(calc_price(float(mileage), y_intercept, slope), '$')
+    except:
+        print("Error: not a valid mileage")
+        f.close()
+        exit()
     f.close()
     
