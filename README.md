@@ -25,6 +25,11 @@ The second program uses the data.csv file to estimate the price of a car once th
   Enter a mileage: 180000
   4638.786203426802 $
 ```
+
+## Calculation results
+
+![Calculation results](https://i.ibb.co/5spkTsX/Screen-Shot-2022-04-27-at-17-26-02.png)
+
     
 ## Documentation
 
