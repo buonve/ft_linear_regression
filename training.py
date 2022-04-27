@@ -1,7 +1,7 @@
 import csv
 
 def learn_from_data(data):
-    # calculate the mean of the x and y
+    # calculate the mean of the xes and ys
     x_mean = 0
     row_counter = len(data)
     try:
@@ -12,7 +12,7 @@ def learn_from_data(data):
         for row in data:
             y_mean += float(row[1])
         y_mean = y_mean / row_counter
-        # calculate the errors for earch x and y
+        # calculate the errors for each x and y
         x_errors = []
         for row in data:
             x_errors.append(float(row[0]) - x_mean)
@@ -33,7 +33,6 @@ def learn_from_data(data):
         
         # calculate the slope of the line
         slope = sum(x_y_product) / sum(x_squared_errors)
-        print(slope)
 
         # calculate the y-intercept of the line
         y_intercept = y_mean - (slope * x_mean)
@@ -62,7 +61,7 @@ if __name__ == '__main__':
     writer.writerow(intercept_slope)
     output.close()
 
-    print(intercept_slope)
+    print('Learning complete')
 
 
 
