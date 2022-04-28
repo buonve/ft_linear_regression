@@ -84,10 +84,3 @@ if __name__ == '__main__':
     print('Learning complete')
     # plot the data
     plotData(data, intercept_slope[0], intercept_slope[1])
-
-
-
-
-
-
-

@@ -21,11 +21,17 @@ if __name__ == '__main__':
         f.close()
         exit()
     mileage = input("Enter the mileage: ")
+    price = 0
     try:
-        print('Predicted price:', calc_price(float(mileage), y_intercept, slope), '$')
+        price = calc_price(float(mileage), y_intercept, slope)
+        if price < 0:
+            price = 0
+        print('Predicted price:', price, '$')
     except:
         print("Error: not a valid mileage")
         f.close()
         exit()
+
+
     f.close()
     
