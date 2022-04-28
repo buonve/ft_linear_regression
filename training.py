@@ -1,4 +1,5 @@
 import csv
+import matplotlib.pyplot as plt
 
 def learn_from_data(data):
     # calculate the mean of the xes and ys
@@ -43,7 +44,7 @@ def learn_from_data(data):
     return ([y_intercept, slope])
 
 def plotData(data, y_intercept, slope):
-    import matplotlib.pyplot as plt
+    
     plt.xlabel('Mileage')
     plt.ylabel('Car Prices')
     x_values = []
