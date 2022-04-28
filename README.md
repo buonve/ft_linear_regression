@@ -15,7 +15,7 @@ The project cointains two python programs:
   ./training.py
   ./predict_price.py
 ```
-The first program expect some csv data (in this example I'm using the car mileage and the prices at which thhese car are sold).
+The first program expect some csv data (in this example I'm using the car mileage and the prices at which these are sold).
 Once the program is runned, a new file data.csv is created.
 
 The second program uses the data.csv file to estimate the price of a car once the milage is inserted.
