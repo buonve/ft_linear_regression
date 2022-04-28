@@ -16,14 +16,14 @@ The project cointains two python programs:
   ./predict_price.py
 ```
 The first program expect some csv data (in this example I'm using the car mileage and the prices at which these are sold).
-Once the program is runned, a new file data.csv is created.
+Once the program is runned, if data is correct, a new file data.csv is created and the graph of the points and the linear regression is plotted.
 
 The second program uses the data.csv file to estimate the price of a car once the milage is inserted.
 
 ```
   python3 predict_price.py
   Enter a mileage: 180000
-  4638.786203426802 $
+  Estimated price: 4638.786203426802 $
 ```
 
 ## Calculation results
