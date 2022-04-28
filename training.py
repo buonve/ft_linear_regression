@@ -58,6 +58,7 @@ def plotData(data, y_intercept, slope):
 
 
 if __name__ == '__main__':
+    # read the data from the csv file
     try:
         file = open('data.csv', 'r')
     except:
@@ -74,12 +75,14 @@ if __name__ == '__main__':
         file.close()
         exit()
     file.close()
+    # write the data to a new csv file
     output = open('output.csv', 'w')
     writer = csv.writer(output)
     writer.writerow(intercept_slope)
     output.close()
 
     print('Learning complete')
+    # plot the data
     plotData(data, intercept_slope[0], intercept_slope[1])
 
 
