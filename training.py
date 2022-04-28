@@ -44,7 +44,11 @@ def learn_from_data(data):
 
 
 if __name__ == '__main__':
-    file = open('data.csv', 'r')
+    try:
+        file = open('data.csv', 'r')
+    except:
+        print("Error: missing data")
+        exit()
     csvreader = csv.reader(file)
     header = []
     header = next(csvreader)
