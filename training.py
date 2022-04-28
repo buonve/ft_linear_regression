@@ -42,6 +42,19 @@ def learn_from_data(data):
 
     return ([y_intercept, slope])
 
+def plotData(data, y_intercept, slope):
+    import matplotlib.pyplot as plt
+    plt.xlabel('Mileage')
+    plt.ylabel('Car Prices')
+    x_values = []
+    y_values = []
+    for row in data:
+        x_values.append(float(row[0]))
+        y_values.append(float(row[1]))
+    plt.plot(x_values, y_values, 'ro')
+    plt.plot(x_values, [y_intercept + slope * x for x in x_values])
+    plt.show()
+
 
 if __name__ == '__main__':
     try:
@@ -66,6 +79,10 @@ if __name__ == '__main__':
     output.close()
 
     print('Learning complete')
+    plotData(data, intercept_slope[0], intercept_slope[1])
+
+
+
 
 
 
